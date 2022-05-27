@@ -39,7 +39,7 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-  .connect('mongodb+srv://placeblog:placeblog@cluster0.7ed0a.mongodb.net/blog?retryWrites=true&w=majority')
+  .connect(MONGODB_URI)
   .then(() => {
     app.listen(5000);
   })
