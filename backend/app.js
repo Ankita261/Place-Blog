@@ -39,7 +39,7 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-  .connect(`MONGO_URI`)
+  .connect(MONGODB_URI)
   .then(() => {
     app.listen(5000);
   })
