@@ -60,7 +60,7 @@ const signup = async (req, res, next) => {
   const createdUser = new User({
     name,
     email,
-    image: 'https://static.standard.co.uk/2022/04/04/11/TWPITW_Still_11.jpg?width=900&auto=webp&quality=50&crop=968%3A645%2Csmart',
+    image: req.file.path,
     password,
     places: []
   })
