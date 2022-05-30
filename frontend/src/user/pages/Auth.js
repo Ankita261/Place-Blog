@@ -76,7 +76,7 @@ const authSubmitHandler = async event => {
                     'Content-Type': 'application/json'
                 }
             );
-            auth.login(responseData.user.id);
+            auth.login(responseData.userId, responseData.token);
         } catch (err) {}
         
     } else {
@@ -92,7 +92,7 @@ const authSubmitHandler = async event => {
                 'POST',
                 formData
             );
-            auth.login(responseData.user.id)   
+            auth.login(responseData.userId, responseData.token)   
         }
          catch (err) {}    
     }
